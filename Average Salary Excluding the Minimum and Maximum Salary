@@ -1,0 +1,30 @@
+class Solution {
+    public static double average(int[] salary) {
+    // Find the minimum and maximum salary
+    int minSalary = Integer.MAX_VALUE;
+    int maxSalary = Integer.MIN_VALUE;
+    for (int i = 0; i < salary.length; i++) {
+        if (salary[i] < minSalary) {
+            minSalary = salary[i];
+        }
+        if (salary[i] > maxSalary) {
+            maxSalary = salary[i];
+        }
+    }
+    
+    // Remove the minimum and maximum salary from the array
+    int sum = 0;
+    int count = 0;
+    for (int i = 0; i < salary.length; i++) {
+        if (salary[i] != minSalary && salary[i] != maxSalary) {
+            sum += salary[i];
+            count++;
+        }
+    }
+    
+    // Calculate the average of the remaining salaries
+    double averageSalary = (double) sum / count;
+    
+    return averageSalary;
+}
+}
