@@ -1,0 +1,22 @@
+class Solution {
+    public int numSubseq(int[] nums, int target) {
+        int n = nums.length;
+        int[] count = new int[n+1];
+        count[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            count[i] = count[i-1] * 2 % 1000000007;
+        }
+        Arrays.sort(nums);
+        int left = 0, right = n-1;
+        int ans = 0;
+        while (left <= right) {
+            if (nums[left] + nums[right] <= target) {
+                ans = (ans + count[right-left]) % 1000000007;
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return ans;
+    }
+}
