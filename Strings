@@ -1,0 +1,82 @@
+String charAt()
+String name="javatpoint";  
+char ch=name.charAt(4);//returns the char value at the 4th index  
+
+
+String compareTo()
+String s1="hello";  
+String s2="hello";  
+String s3="meklo";  
+String s4="hemlo";  
+String s5="flag";  
+System.out.println(s1.compareTo(s2));//0 because both are equal  
+System.out.println(s1.compareTo(s3));//-5 because "h" is 5 times lower than "m"  
+System.out.println(s1.compareTo(s4));//-1 because "l" is 1 times lower than "m"  
+System.out.println(s1.compareTo(s5));//2 because "h" is 2 times greater than "f"  
+
+
+String concat()
+   String str1 = "Hello";  
+        String str2 = "Javatpoint";  
+        String str3 = "Reader";  
+        // Concatenating one string   
+        String str4 = str1.concat(str2);          
+        System.out.println(str4);  
+        // Concatenating multiple strings  
+        String str5 = str1.concat(str2).concat(str3);  
+        System.out.println(str5);  
+
+
+String contains()
+public static void main(String args[]){  
+String name="what do you know about me";  
+System.out.println(name.contains("do you know"));  
+System.out.println(name.contains("about"));  
+System.out.println(name.contains("hello"));  
+
+
+String endsWith()
+String s1="java by javatpoint";  
+System.out.println(s1.endsWith("t"));  
+System.out.println(s1.endsWith("point"));  
+
+
+String equals()
+String s1="javatpoint";  
+String s2="javatpoint";  
+String s3="JAVATPOINT";  
+String s4="python";  
+System.out.println(s1.equals(s2));//true because content and case is same  
+System.out.println(s1.equals(s3));//false because case is not same  
+System.out.println(s1.equals(s4));//false because content is not same  
+
+
+equalsIgnoreCase()
+String s1="javatpoint";  
+String s2="javatpoint";  
+String s3="JAVATPOINT";  
+String s4="python";  
+System.out.println(s1.equalsIgnoreCase(s2));//true because content and case both are same  
+System.out.println(s1.equalsIgnoreCase(s3));//true because case is ignored  
+System.out.println(s1.equalsIgnoreCase(s4));//false because content is not same  
+
+
+String format()
+String getBytes()
+String getChars()
+String indexOf()
+String intern()
+String isEmpty()
+String join()
+String lastIndexOf()
+String length() 
+String replace()
+String replaceAll()
+String split()
+String startsWith()
+String substring()
+String toCharArray()
+String toLowerCase()
+String toUpperCase()
+String trim()
+String valueOf()
