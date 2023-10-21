@@ -1,0 +1,26 @@
+class Solution {
+    public String addBinary(String a, String b) {
+         int maxLength = Math.max(a.length(), b.length());
+        // Ensure both binary strings are of equal length by padding with leading zeros
+        a = String.format("%" + maxLength + "s", a).replace(' ', '0');
+        b = String.format("%" + maxLength + "s", b).replace(' ', '0');
+
+        StringBuilder result = new StringBuilder();
+        int carry = 0;
+
+        for (int i = maxLength - 1; i >= 0; i--) {
+            int bitA = a.charAt(i) - '0';
+            int bitB = b.charAt(i) - '0';
+            int sum = bitA + bitB + carry;
+            result.insert(0, sum % 2);
+            carry = sum / 2;
+        }
+
+        if (carry > 0) {
+            result.insert(0, carry);
+        }
+
+        return result.toString();
+        
+    }
+}
