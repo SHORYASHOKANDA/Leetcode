@@ -1,0 +1,12 @@
+class Solution {
+    public int reductionOperations(int[] nums) {
+        Arrays.sort(nums);
+        int largestnum =0;
+        for(int i =nums.length-1;i>0;i--){
+            if(nums[i-1]!=nums[i]){
+                largestnum = largestnum + nums.length-i;
+            }
+        }
+        return largestnum;
+    }
+}
